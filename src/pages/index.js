@@ -72,7 +72,6 @@ addButton.addEventListener('click', () => {
     newCardPopup.open();
     newCardPopup.setEventListeners();
 });
-console.log('asda')
 //кнопка открытия редадактирования профиля
 editButton.addEventListener('click', () => {
     profileValid.resetAllInputError();
