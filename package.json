@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "rimraf dist && webpack --mode production",
-    "dev": "webpack-dev-server --open --watch --mode development"
+    "dev": "webpack-dev-server --open --watch --mode development",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "gh-pages": "^3.1.0",
     "rimraf": "^3.0.2"
   }
 }
