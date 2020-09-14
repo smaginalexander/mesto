@@ -16,10 +16,6 @@ export class Popup {
         this._popupSelector.classList.remove('popup_opened');
         //нажатие на клавишу еск
         document.removeEventListener('keydown', this._handleEscClose)
-        //клик на оверлей
-        document.removeEventListener('mousedown', evt => {
-            if (evt.target.classList.contains('popup')) this.close();
-        });
     }
     _handleEscClose(evt) {
         if (evt.key === 'Escape') {
@@ -27,8 +23,10 @@ export class Popup {
         };
     }
     setEventListeners() {
-        this._popupSelector.querySelector('.popup__close').addEventListener('mousedown', () => {
-            this.close();
+        this._popupSelector.addEventListener('click', (evt) => {
+            if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close')) {
+                this.close();
+            }
         });
     }
 }
