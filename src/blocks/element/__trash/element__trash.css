@@ -1,5 +1,6 @@
 .element__trash {
     position: absolute;
+    display: none;
     top: 18px;
     left: 249px;
     background-color: rgba(0, 0, 0, 0);

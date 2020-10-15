@@ -6,11 +6,11 @@ export class Section {
     }
     //добавить элемент в разметку
     addItem(element) {
-        this._container.prepend(element);
+        this._container.append(element);
     }
     //отрисовка всех елементов массива
-    renderElements() {
-        this._initialArray.forEach(item => {
+    renderElements(cards) {
+        cards.forEach(item => {
             this._renderer(item);
         });
     }

@@ -1,3 +1,4 @@
 .element__btn_active {
     background-image: url(../../../../images/like.svg);
+    outline: none;
 }

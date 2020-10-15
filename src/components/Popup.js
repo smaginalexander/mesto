@@ -10,13 +10,12 @@ export class Popup {
     }
     close() {
         this._popupSelector.classList.remove('popup_opened');
-        //нажатие на клавишу еск
-        document.removeEventListener('keydown', this._handleEscClose)
+        document.removeEventListener('keydown', this._handleEscClose);
     }
     _handleEscClose(evt) {
         if (evt.key === 'Escape') {
             this.close();
-        };
+        }
     }
     setEventListeners() {
         this._popupSelector.addEventListener('click', (evt) => {
